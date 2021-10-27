@@ -56,6 +56,7 @@ code {
   padding: 20px;
   margin-bottom: 20px;
   width: 100%;
+  list-style: none;
 }
 
 @media (max-width: 800px) {
@@ -82,6 +83,9 @@ code {
   color: #fff;
   font-weight: 600;
   font-size: 15px;
+}
+#show_more button:hover {
+  background-color: #2a5783;
 }
 
 footer {

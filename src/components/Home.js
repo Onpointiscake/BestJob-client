@@ -49,20 +49,20 @@ export default function Home() {
   return (
     <Container id="container_general">
       {ejemploOfertas.map((oferta) => (
-        <div id="container_oferta">
-          <spam id="oferta_titulo">
+        <ul key={oferta.id} id="container_oferta">
+          <li id="oferta_titulo">
             {" "}
             <h2>{oferta.titulo}</h2>{" "}
-          </spam>
-          <spam id="oferta_experiencia">
+          </li>
+          <li id="oferta_experiencia">
             <h3>{oferta.experienciaAnyos}</h3>
-          </spam>
-          <spam id="show_more">
+          </li>
+          <li id="show_more">
             <Link to={`/oferta/${oferta.id}`}>
               <button>Ver más</button>
             </Link>
-          </spam>
-        </div>
+          </li>
+        </ul>
       ))}
     </Container>
   );

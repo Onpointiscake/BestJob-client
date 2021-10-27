@@ -33,6 +33,7 @@ a {
 }
 #columna_izq_oferta {
   width: 30%;
+  list-style: none;
 }
 #columna_der_oferta {
   width: 70%;
@@ -45,4 +46,7 @@ a {
   color: #fff;
   font-size: 15px;
   font-weight: bold;
+}
+#contact_btn:hover {
+  background-color: #2a5783;
 }
