@@ -1,7 +1,22 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
 
 export default function Oferta() {
+
+    const [oferta, setOferta] = useState([])
+
+    useEffect(() => recibirOferta(), [])
+
+    const getParam = useParams();
+    const ofertaParamId = getParam.id
+
+    const recibirOferta = async () => {
+        const ofertaResponse = await fetch(`https://jsonplaceholder.typicode.com/users/${ofertaParamId}`)
+        const data = await ofertaResponse.json()
+        setOferta(data)
+    }
+
+  /*
   const ejemploOferta = [
     {
       id: 1,
@@ -53,12 +68,8 @@ export default function Oferta() {
       remoto: "Remoto",
       tecnologias: ["Phyton", "Java", "Spring", "PHP", "GIT"],
     },
-  ];
-
-  const getParam = useParams();
-  const oferta = parseInt(getParam.id);
-
-  const ofertaElegida = ejemploOferta.filter((item) => item.id === oferta);
+  ];*/
+  //const ofertaElegida = ejemploOferta.filter((item) => item.id === ofertaId);
 
   return (
     <div id="container_general_oferta">
@@ -96,25 +107,25 @@ export default function Oferta() {
         {" "}
         <div id="header_oferta">
           <h1>
-            {ofertaElegida[0].titulo} en {ofertaElegida[0].empresa}
+            {oferta.name} en {oferta.username}
           </h1>
         </div>
         <div id="cuerpo_oferta">
           <ul id="columna_izq_oferta">
             <li>
-              <b>Experiencia:</b> {ofertaElegida[0].experienciaAnyos}
+              <b>Experiencia:</b> Loreipsum
             </li>
             <li>
-              <b>Salario:</b> {ofertaElegida[0].salarioBruto}
+              <b>Salario:</b> {oferta.id}
             </li>
             <li>
-              <b>Remoto:</b> {ofertaElegida[0].remoto}
+              <b>Remoto:</b> Loreipsum
             </li>
             <li id="tecnologias">
               <b>Tecnologias:</b>
             </li>
           </ul>
-          <p id="columna_der_oferta">{ofertaElegida[0].descripcion}</p>
+          <p id="columna_der_oferta">{oferta.email}</p>
         </div>
         <button id="contact_btn" variant="primary">
           CONTACTA
