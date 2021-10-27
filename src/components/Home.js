@@ -1,36 +1,69 @@
-import { Container } from 'react-bootstrap';
-import {Link} from 'react-router-dom'
+import { Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export default function Home() {
-    
-    // Ejemplo en local
-    const ejemploOfertas = [
-        { id: 1, puesto: "Software Engineer", empresa: "Toptal", lugar: "Madrid" },
-        { id: 2, puesto: "Front End Developer", empresa: "AYTT", lugar: "Remote" },
-        { id: 3, puesto: "iOS Deverloper", empresa: "Redlek", lugar: "London" }
-    ];
+  // Ejemplo en local
+  const ejemploOfertas = [
+    {
+      id: 1,
+      titulo: "Software Engineer",
+      descripcion:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      experienciaAnyos: "JUNIOR",
+      salarioBruto: "2.000 - 3.000",
+      empresa: "Toptal",
+      telefono: "615000000",
+      email: "email@miemail.mail",
+      remoto: "Remoto",
+      tecnologias:
+        "Phyton, Java, Spring, PHP, GIT, HTML5, CSS3, JavaScript, Angular, React.js",
+    },
+    {
+      id: 2,
+      titulo: "Front-End Developer",
+      descripcion:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      experienciaAnyos: "SENIOR A PRECIO DE JUNIOR",
+      salarioBruto: "7.000 - 9.000",
+      empresa: "AYTT",
+      telefono: "615000000",
+      email: "email@miemail.mail",
+      remoto: "Remoto",
+      tecnologias: "HTML5, CSS3, JavaScript, Angular, React.js, y mucho mas",
+    },
+    {
+      id: 3,
+      titulo: "Back-End Developer",
+      descripcion:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      experienciaAnyos: "BECARIO",
+      salarioBruto: "2.000-4.000",
+      empresa: "Redlek",
+      telefono: "615000000",
+      email: "email@miemail.mail",
+      remoto: "Remoto",
+      tecnologias: "Phyton, Java, Spring, PHP, GIT, y mucho mas",
+    },
+  ];
 
-    return (
-        <Container>
-     <h1>Ofertas abiertas</h1>
-          <table>
-            <thead>
-              <th>Puesto</th>
-              <th>Empresa</th>
-              <th>Lugar</th>
-            </thead>
-    
-            {ejemploOfertas.map((oferta) => (
-              <tr>
-                <td>{oferta.puesto}</td>
-                <td>{oferta.empresa}</td>
-                <td>{oferta.lugar}</td>
-                <Link to={`/oferta/${oferta.id}`}>Ir a la Oferta</Link>
-              </tr>
-            ))}
-          </table>
-
-        </Container>
-      );
-    
+  return (
+    <Container id="container_general">
+      {ejemploOfertas.map((oferta) => (
+        <ul key={oferta.id} id="container_oferta">
+          <li id="oferta_titulo">
+            {" "}
+            <h2>{oferta.titulo}</h2>{" "}
+          </li>
+          <li id="oferta_experiencia">
+            <h3>{oferta.experienciaAnyos}</h3>
+          </li>
+          <li id="show_more">
+            <Link to={`/oferta/${oferta.id}`}>
+              <button>Ver más</button>
+            </Link>
+          </li>
+        </ul>
+      ))}
+    </Container>
+  );
 }
