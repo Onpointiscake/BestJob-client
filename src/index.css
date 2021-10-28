@@ -10,6 +10,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #39393e;
+  display: flex;
+  flex-direction: column;
 }
 nav {
   padding: 3vh;
@@ -43,10 +45,11 @@ code {
 }
 #container_general {
   max-width: 80%;
-  height: 80vh;
-
   margin: auto;
+  flex-grow: 1;
+  padding: 30px;
 }
+
 #container_oferta {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -91,12 +94,13 @@ code {
 footer {
   display: flex;
   padding: 50px;
-  height: 10vh;
   align-items: center;
   justify-content: space-between;
   background-color: #617488;
   color: #fff;
   font-size: 12px;
+
+  width: 100%;
 }
 
 #autores ul {
