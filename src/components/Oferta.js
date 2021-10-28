@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 export default function Oferta() {
 
     const [oferta, setOferta] = useState([])
+    const [tecnologia, setTecnologia] = useState([])
 
     useEffect(() => recibirOferta(), [])
 
@@ -11,65 +12,16 @@ export default function Oferta() {
     const ofertaParamId = getParam.id
 
     const recibirOferta = async () => {
-        const ofertaResponse = await fetch(`https://jsonplaceholder.typicode.com/users/${ofertaParamId}`)
-        const data = await ofertaResponse.json()
-        setOferta(data)
-    }
+        const ofertaResponse = await fetch(`http://devsyn.net:8080/api/v1/ofertas/${ofertaParamId}`)
+        const tecnologiaResponse = await fetch(`http://devsyn.net:8080/api/v1/tecnologias/${ofertaParamId}`)
 
-  /*
-  const ejemploOferta = [
-    {
-      id: 1,
-      titulo: "Software Engineer",
-      descripcion:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      experienciaAnyos: "JUNIOR",
-      salarioBruto: "2.000 - 3.000",
-      empresa: "Toptal",
-      telefono: "615000000",
-      email: "email@miemail.mail",
-      remoto: "Remoto",
-      tecnologias: [
-        "HTML5",
-        "CSS3",
-        "JavaScript",
-        "Angular",
-        "React.js",
-        "Phyton",
-        "Java",
-        "Spring",
-        "PHP",
-        "GIT",
-      ],
-    },
-    {
-      id: 2,
-      titulo: "Front-End Developer",
-      descripcion:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      experienciaAnyos: "SENIOR A PRECIO DE JUNIOR",
-      salarioBruto: "7.000 - 9.000",
-      empresa: "AYTT",
-      telefono: "615000000",
-      email: "email@miemail.mail",
-      remoto: "Remoto",
-      tecnologias: ["HTML5", "CSS3", "JavaScript", "Angular", "React.js"],
-    },
-    {
-      id: 3,
-      titulo: "Back-End Developer",
-      descripcion:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      experienciaAnyos: "BECARIO",
-      salarioBruto: "2.000-4.000",
-      empresa: "Redlek",
-      telefono: "615000000",
-      email: "email@miemail.mail",
-      remoto: "Remoto",
-      tecnologias: ["Phyton", "Java", "Spring", "PHP", "GIT"],
-    },
-  ];*/
-  //const ofertaElegida = ejemploOferta.filter((item) => item.id === ofertaId);
+        const data = await ofertaResponse.json()
+        const dataTecnologia = await tecnologiaResponse.json()
+
+        setOferta(data)
+        setTecnologia(dataTecnologia)
+    }
+    
 
   return (
     <div id="container_general_oferta">
@@ -107,25 +59,25 @@ export default function Oferta() {
         {" "}
         <div id="header_oferta">
           <h1>
-            {oferta.name} en {oferta.username}
+            {oferta.titulo} en {oferta.empresa}
           </h1>
         </div>
         <div id="cuerpo_oferta">
           <ul id="columna_izq_oferta">
             <li>
-              <b>Experiencia:</b> Loreipsum
+              <b>Experiencia:</b> {oferta.anyosExperiencia}
             </li>
             <li>
-              <b>Salario:</b> {oferta.id}
+              <b>Salario:</b> {oferta.salario}
             </li>
             <li>
-              <b>Remoto:</b> Loreipsum
+              <b>Remoto:</b> {oferta.remoto ? 'Si' : 'No'} 
             </li>
             <li id="tecnologias">
-              <b>Tecnologias:</b>
+              <b>Tecnologias:</b> {tecnologia.nombre}
             </li>
           </ul>
-          <p id="columna_der_oferta">{oferta.email}</p>
+          <p id="columna_der_oferta">{oferta.detalle}</p>
         </div>
         <button id="contact_btn" variant="primary">
           CONTACTA

@@ -24,7 +24,8 @@ function App() {
           <Home />
         </Route>
       </Switch>
-      <footer>
+      
+        <footer>
         <div id="autores">
           <p>Developed by:</p>
           <ul>
@@ -39,6 +40,7 @@ function App() {
           <p>© 2021 All rights reserved</p>
         </div>
       </footer>
+     
     </BrowserRouter>
   );
 }

@@ -4,7 +4,7 @@ import React, {useState, useEffect} from "react"
 
 export default function Home() {
 
-  const ofertasURL = "https://jsonplaceholder.typicode.com/users"
+  const ofertasURL = "http://devsyn.net:8080/api/v1/ofertas"
 
   const [ofertas, setOfertas] = useState([])
   useEffect(() => recibirOfertas(), [])
@@ -15,16 +15,19 @@ export default function Home() {
     setOfertas(data)
   }
 
+  console.log(ofertas)
+
   return (
     <Container id="container_general">
+    
       {ofertas.map((oferta) => (
         <ul key={oferta.id} id="container_oferta">
           <li id="oferta_titulo">
             {" "}
-            <h2>{oferta.name}</h2>{" "}
+            <h2>{oferta.titulo}</h2>{" "}
           </li>
           <li id="oferta_experiencia">
-            <h3>{oferta.id}</h3>
+            <h3>{oferta.empresa}</h3>
           </li>
           <li id="show_more">
             <Link to={`/oferta/${oferta.id}`}>
