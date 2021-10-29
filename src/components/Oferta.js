@@ -24,9 +24,9 @@ export default function Oferta() {
     
 
   return (
-    <div id="container_general_oferta">
+    <div className="container_general_oferta">
       <div to="/">
-        <button id="back_btn" variant="secondary">
+        <button className="back_btn" variant="secondary">
           <a href="/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -55,15 +55,15 @@ export default function Oferta() {
           </a>
         </button>
       </div>
-      <div id="container_oferta_ind">
+      <div className="container_oferta_ind">
         {" "}
-        <div id="header_oferta">
+        <div className="header_oferta">
           <h1>
             {oferta.titulo} en {oferta.empresa}
           </h1>
         </div>
-        <div id="cuerpo_oferta">
-          <ul id="columna_izq_oferta">
+        <div className="cuerpo_oferta">
+          <ul className="columna_izq_oferta">
             <li>
               <b>Experiencia:</b> {oferta.anyosExperiencia}
             </li>
@@ -73,13 +73,13 @@ export default function Oferta() {
             <li>
               <b>Remoto:</b> {oferta.remoto ? 'Si' : 'No'} 
             </li>
-            <li id="tecnologias">
+            <li className="tecnologias">
               <b>Tecnologias:</b> {tecnologia.nombre}
             </li>
           </ul>
-          <p id="columna_der_oferta">{oferta.detalle}</p>
+          <p className="columna_der_oferta">{oferta.detalle}</p>
         </div>
-        <button id="contact_btn" variant="primary">
+        <button className="contact_btn" variant="primary">
           CONTACTA
         </button>
       </div>

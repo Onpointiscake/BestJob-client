@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&family=Quicksand:wght@700&display=swap");
 
+/* GENERAL */
+
 * {
   padding: 0;
   margin: 0;
@@ -13,6 +15,9 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+/* NAVEGACION */
+
 nav {
   padding: 3vh;
   display: flex;
@@ -24,6 +29,9 @@ nav {
 nav img {
   max-height: 30vh;
 }
+
+/* BOTONES */
+
 
 #cuelga_oferta {
   background-color: #5dd39a;
@@ -37,40 +45,6 @@ nav img {
 }
 #cuelga_oferta:hover {
   background-color: #277a52;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-#container_general {
-  max-width: 80%;
-  margin: auto;
-  flex-grow: 1;
-  padding: 30px;
-}
-
-#container_oferta {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.249);
-  border-radius: 20px;
-  padding: 20px;
-  margin-bottom: 20px;
-  width: 100%;
-  list-style: none;
-}
-
-@media (max-width: 800px) {
-  #container_oferta {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-#oferta_experiencia h3 {
-  font-weight: 300;
 }
 
 #show_more {
@@ -91,6 +65,31 @@ code {
   background-color: #2a5783;
 }
 
+/* CONTAINERS */
+
+#container_general {
+  max-width: 80%;
+  margin: auto;
+  flex-grow: 1;
+  padding: 30px;
+}
+
+#container_oferta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.249);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  list-style: none;
+}
+
+
+/* FOOTER */
+
+
 footer {
   display: flex;
   padding: 50px;
@@ -107,4 +106,18 @@ footer {
   grid-template: 1fr 1fr / 1fr 1fr;
   grid-gap: 0px 20px;
   list-style: none;
+}
+
+/* QUERIES */
+
+
+@media (max-width: 800px) {
+  #container_oferta {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+#oferta_experiencia h3 {
+  font-weight: 300;
 }

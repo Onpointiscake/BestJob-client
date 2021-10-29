@@ -18,18 +18,18 @@ export default function Home() {
   console.log(ofertas)
 
   return (
-    <Container id="container_general">
+    <Container className="container_general">
     
       {ofertas.map((oferta) => (
-        <ul key={oferta.id} id="container_oferta">
-          <li id="oferta_titulo">
+        <ul key={oferta.id} className="container_oferta">
+          <li className="oferta_titulo">
             {" "}
             <h2>{oferta.titulo}</h2>{" "}
           </li>
-          <li id="oferta_experiencia">
+          <li className="oferta_experiencia">
             <h3>{oferta.empresa}</h3>
           </li>
-          <li id="show_more">
+          <li className="show_more">
             <Link to={`/oferta/${oferta.id}`}>
               <button>Ver más</button>
             </Link>

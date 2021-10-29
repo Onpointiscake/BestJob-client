@@ -8,9 +8,9 @@ function App() {
     <BrowserRouter>
       <nav>
         <a href="/">
-          <img id="logo" src={logo} alt="Logo Best Jobs" />
+          <img className="logo" src={logo} alt="Logo Best Jobs" />
         </a>
-        <button id="cuelga_oferta" a="/">
+        <button className="cuelga_oferta" a="/">
           {" "}
           ¿Eres una empresa?
         </button>
@@ -26,16 +26,16 @@ function App() {
       </Switch>
       
         <footer>
-        <div id="autores">
+        <div className="autores">
           <p>Developed by:</p>
           <ul>
             <li>Clemente Quintana</li>
-            <li>Josema Saborido</li>
+            <li>Josema SaborclassNameo</li>
             <li>Javier Suarez</li>
             <li>Ana Fernandez</li>
           </ul>
         </div>
-        <div id="openBoot">
+        <div className="openBoot">
           <p>Open Boot Camp Project</p>
           <p>© 2021 All rights reserved</p>
         </div>
