@@ -4,7 +4,7 @@ import React, {useState, useEffect} from "react"
 
 export default function Home() {
 
-  const ofertasURL = "http://devsyn.net:8080/api/v1/ofertas"
+  const ofertasURL = "https://best-job.herokuapp.com/api/v1/ofertas"
 
   const [ofertas, setOfertas] = useState([])
   useEffect(() => recibirOfertas(), [])
