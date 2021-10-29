@@ -12,8 +12,8 @@ export default function Oferta() {
     const ofertaParamId = getParam.id
 
     const recibirOferta = async () => {
-        const ofertaResponse = await fetch(`http://devsyn.net:8080/api/v1/ofertas/${ofertaParamId}`)
-        const tecnologiaResponse = await fetch(`http://devsyn.net:8080/api/v1/tecnologias/${ofertaParamId}`)
+        const ofertaResponse = await fetch(`https://best-job.herokuapp.com/api/v1/ofertas/${ofertaParamId}`)
+        const tecnologiaResponse = await fetch(`https://best-job.herokuapp.com/api/v1/tecnologias/${ofertaParamId}`)
 
         const data = await ofertaResponse.json()
         const dataTecnologia = await tecnologiaResponse.json()
