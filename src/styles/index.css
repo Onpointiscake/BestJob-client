@@ -96,6 +96,9 @@ footer {
   color: #fff;
   font-size: 12px;
   width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .autores ul {

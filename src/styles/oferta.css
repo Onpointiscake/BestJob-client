@@ -35,7 +35,7 @@ a {
   display: flex;
   align-items: center;
   font-size: 15px;
-  color: .617488;
+  color: #617488;
   padding: 20px;
   text-decoration: none;
 }
@@ -43,16 +43,15 @@ a {
   width: 30px;
 }
 
-
 .contact_btn {
-  background-color: .397cc1;
+  background-color: 0.397cc1;
   padding: 10px;
   border: none;
   border-radius: 10px;
   color: #fff;
   font-size: 15px;
   font-weight: bold;
-}∫
-.contact_btn:hover {
-  background-color: .2a5783;
+}
+∫ .contact_btn:hover {
+  background-color: 0.2a5783;
 }
