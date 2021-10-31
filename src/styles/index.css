@@ -32,8 +32,7 @@ nav img {
 
 /* BOTONES */
 
-
-#cuelga_oferta {
+.cuelga_oferta {
   background-color: #5dd39a;
   border: none;
   font-size: 1.3em;
@@ -43,15 +42,15 @@ nav img {
   color: #fff;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.249);
 }
-#cuelga_oferta:hover {
+.cuelga_oferta:hover {
   background-color: #277a52;
 }
 
-#show_more {
+.show_more {
   align-items: center;
   justify-self: end;
 }
-#show_more button {
+.show_more button {
   background-color: #397cc1;
   border: none;
   padding: 10px;
@@ -61,20 +60,20 @@ nav img {
   font-weight: 600;
   font-size: 15px;
 }
-#show_more button:hover {
+.show_more button:hover {
   background-color: #2a5783;
 }
 
 /* CONTAINERS */
 
-#container_general {
+.container_general {
   max-width: 80%;
   margin: auto;
   flex-grow: 1;
   padding: 30px;
 }
 
-#container_oferta {
+.container_oferta {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
@@ -86,9 +85,7 @@ nav img {
   list-style: none;
 }
 
-
 /* FOOTER */
-
 
 footer {
   display: flex;
@@ -101,7 +98,7 @@ footer {
   width: 100%;
 }
 
-#autores ul {
+.autores ul {
   display: grid;
   grid-template: 1fr 1fr / 1fr 1fr;
   grid-gap: 0px 20px;
@@ -110,7 +107,6 @@ footer {
 
 /* QUERIES */
 
-
 @media (max-width: 800px) {
   #container_oferta {
     display: flex;
@@ -118,6 +114,6 @@ footer {
   }
 }
 
-#oferta_experiencia h3 {
+.oferta_experiencia h3 {
   font-weight: 300;
 }
