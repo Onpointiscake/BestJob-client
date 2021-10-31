@@ -51,7 +51,8 @@ a {
   color: #fff;
   font-size: 15px;
   font-weight: bold;
+  background-color: #397cc1;
 }
-∫ .contact_btn:hover {
-  background-color: 0.2a5783;
+.contact_btn:hover {
+  background-color: #235281;
 }
