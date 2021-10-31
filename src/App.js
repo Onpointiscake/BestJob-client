@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Home from "./components/Home";
+import Home from "./components/HomeList";
 import Oferta from "./components/Oferta";
 import logo from "./assets/logo/bestjobs-logo2.png";
 
@@ -24,13 +24,13 @@ function App() {
           <Home />
         </Route>
       </Switch>
-      
-        <footer>
+
+      <footer>
         <div className="autores">
           <p>Developed by:</p>
           <ul>
             <li>Clemente Quintana</li>
-            <li>Josema SaborclassNameo</li>
+            <li>Josema Saboreo</li>
             <li>Javier Suarez</li>
             <li>Ana Fernandez</li>
           </ul>
@@ -40,7 +40,6 @@ function App() {
           <p>© 2021 All rights reserved</p>
         </div>
       </footer>
-     
     </BrowserRouter>
   );
 }

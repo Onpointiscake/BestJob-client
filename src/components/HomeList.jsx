@@ -1,25 +1,22 @@
-import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import React, {useState, useEffect} from "react"
+import React, { useState, useEffect } from "react";
 
 export default function Home() {
+  const ofertasURL = "https://best-job.herokuapp.com/api/v1/ofertas";
 
-  const ofertasURL = "https://best-job.herokuapp.com/api/v1/ofertas"
-
-  const [ofertas, setOfertas] = useState([])
-  useEffect(() => recibirOfertas(), [])
+  const [ofertas, setOfertas] = useState([]);
+  useEffect(() => recibirOfertas(), []);
 
   const recibirOfertas = async () => {
-    const ofertaResponse = await fetch(ofertasURL)
-    const data = await ofertaResponse.json()
-    setOfertas(data)
-  }
+    const ofertaResponse = await fetch(ofertasURL);
+    const data = await ofertaResponse.json();
+    setOfertas(data);
+  };
 
-  console.log(ofertas)
+  console.log(ofertas);
 
   return (
-    <Container className="container_general">
-    
+    <div className="container_general">
       {ofertas.map((oferta) => (
         <ul key={oferta.id} className="container_oferta">
           <li className="oferta_titulo">
@@ -36,6 +33,6 @@ export default function Home() {
           </li>
         </ul>
       ))}
-    </Container>
+    </div>
   );
 }

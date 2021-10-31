@@ -1,27 +1,29 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 export default function Oferta() {
+  const [oferta, setOferta] = useState([]);
+  const [tecnologia, setTecnologia] = useState([]);
 
-    const [oferta, setOferta] = useState([])
-    const [tecnologia, setTecnologia] = useState([])
+  useEffect(() => recibirOferta());
 
-    useEffect(() => recibirOferta(), [])
+  const getParam = useParams();
+  const ofertaParamId = getParam.id;
 
-    const getParam = useParams();
-    const ofertaParamId = getParam.id
+  const recibirOferta = async () => {
+    const ofertaResponse = await fetch(
+      `https://best-job.herokuapp.com/api/v1/ofertas/${ofertaParamId}`
+    );
+    const tecnologiaResponse = await fetch(
+      `https://best-job.herokuapp.com/api/v1/tecnologias/${ofertaParamId}`
+    );
 
-    const recibirOferta = async () => {
-        const ofertaResponse = await fetch(`https://best-job.herokuapp.com/api/v1/ofertas/${ofertaParamId}`)
-        const tecnologiaResponse = await fetch(`https://best-job.herokuapp.com/api/v1/tecnologias/${ofertaParamId}`)
+    const data = await ofertaResponse.json();
+    const dataTecnologia = await tecnologiaResponse.json();
 
-        const data = await ofertaResponse.json()
-        const dataTecnologia = await tecnologiaResponse.json()
-
-        setOferta(data)
-        setTecnologia(dataTecnologia)
-    }
-    
+    setOferta(data);
+    setTecnologia(dataTecnologia);
+  };
 
   return (
     <div className="container_general_oferta">
@@ -71,7 +73,7 @@ export default function Oferta() {
               <b>Salario:</b> {oferta.salario}
             </li>
             <li>
-              <b>Remoto:</b> {oferta.remoto ? 'Si' : 'No'} 
+              <b>Remoto:</b> {oferta.remoto ? "Si" : "No"}
             </li>
             <li className="tecnologias">
               <b>Tecnologias:</b> {tecnologia.nombre}
@@ -79,9 +81,7 @@ export default function Oferta() {
           </ul>
           <p className="columna_der_oferta">{oferta.detalle}</p>
         </div>
-        <button className="contact_btn" variant="primary">
-          CONTACTA
-        </button>
+        <button className="contact_btn">CONTACTA</button>
       </div>
     </div>
   );
