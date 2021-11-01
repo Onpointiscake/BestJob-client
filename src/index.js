@@ -1,9 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./styles/index.css";
-import "./styles/oferta.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+//STYLES
+import "./styles/index.css";
+import "./styles/oferta.css";
+import "./styles/navbar.css";
+import "./styles/searchbar.css";
+import "./styles/footer.css";
+import "./styles/queries.css";
+import "./styles/toogle.css";
 
 ReactDOM.render(
   <React.StrictMode>

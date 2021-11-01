@@ -1,0 +1,15 @@
+/* QUERIES */
+
+@media (max-width: 1080px) {
+  .container_oferta {
+    display: flex;
+    flex-direction: column;
+  }
+  .container_oferta h2 {
+    text-align: center;
+  }
+  .oferta_experiencia {
+    width: 100%;
+    padding: 5px;
+  }
+}

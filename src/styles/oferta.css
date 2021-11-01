@@ -1,14 +1,13 @@
 /* CONTAINER */
 
 .container_general_oferta {
-  height: 80vh;
   width: 70vw;
   margin: auto;
 }
 
 .container_oferta_ind {
   margin: 20px;
-  background-color: #f9fafc;
+  background-color: var(--light-color);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.281);
   border-radius: 20px;
   padding: 50px;
@@ -35,12 +34,17 @@ a {
   display: flex;
   align-items: center;
   font-size: 15px;
-  color: #617488;
+  color: var(--accent-color);
   padding: 20px;
   text-decoration: none;
+  font-weight: bold;
 }
-.back_btn svg {
+.back_btn img {
   width: 30px;
+}
+.back_btn:hover a:hover,
+img:hover {
+  color: var(--dark-color);
 }
 
 .contact_btn {
@@ -48,11 +52,11 @@ a {
   padding: 10px;
   border: none;
   border-radius: 10px;
-  color: #fff;
+  color: var(--background-color);
   font-size: 15px;
   font-weight: bold;
-  background-color: #397cc1;
+  background-color: var(--accent-color);
 }
 .contact_btn:hover {
-  background-color: #235281;
+  background-color: var(--dark-color);
 }

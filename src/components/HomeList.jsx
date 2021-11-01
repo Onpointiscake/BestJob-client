@@ -23,9 +23,12 @@ export default function Home() {
             {" "}
             <h2>{oferta.titulo}</h2>{" "}
           </li>
-          <li className="oferta_experiencia">
-            <h3>{oferta.empresa}</h3>
-          </li>
+          <div className="oferta_experiencia_container">
+            <li className="oferta_experiencia">
+              <h3>{oferta.empresa}</h3>
+            </li>
+          </div>
+
           <li className="show_more">
             <Link to={`/oferta/${oferta.id}`}>
               <button>Ver más</button>
