@@ -12,4 +12,28 @@
     width: 100%;
     padding: 5px;
   }
+
+  .container_general_oferta {
+    width: 90vw;
+    margin: auto;
+
+  }
+  .container_oferta_ind h1{
+  font-size: 25px;
+  }
+
+  .cuerpo_oferta {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .columna_izq_oferta {
+    width: 100%;
+    list-style: none;
+  }
+  .columna_der_oferta {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+  }
 }

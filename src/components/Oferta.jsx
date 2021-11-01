@@ -59,8 +59,8 @@ export default function Oferta() {
             </li>
           </ul>
           <p className="columna_der_oferta">{oferta.detalle}</p>
-        </div>
-        <button className="contact_btn">CONTACTA</button>
+        </div><div className="button_container">
+        <button className="contact_btn">CONTACTA</button></div>
       </div>
     </div>
   );

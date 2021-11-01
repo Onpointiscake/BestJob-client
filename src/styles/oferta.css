@@ -3,6 +3,7 @@
 .container_general_oferta {
   width: 70vw;
   margin: auto;
+
 }
 
 .container_oferta_ind {
@@ -11,12 +12,19 @@
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.281);
   border-radius: 20px;
   padding: 50px;
+  margin-bottom: 100px;
+}
+
+.container_oferta_ind h1 {
+  text-align: center;
+
 }
 
 .cuerpo_oferta {
   display: flex;
   margin: 15px;
 }
+
 .columna_izq_oferta {
   width: 30%;
   list-style: none;
@@ -25,8 +33,12 @@
   width: 70%;
 }
 
-/* BUTTONS */
 
+/* BUTTONS */
+.button_container {
+display:flex;
+justify-content: center;
+}
 .back_btn,
 a {
   border: none;

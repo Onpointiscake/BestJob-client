@@ -1,5 +1,5 @@
 import Toogle from "../Toggle";
-import logo from "../../assets/logo/LogoOb2.svg";
+import logo from "../../assets/logo/logoOb2.svg";
 function NavBar() {
   return (
     <nav>
