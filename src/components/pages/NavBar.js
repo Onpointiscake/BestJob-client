@@ -1,5 +1,8 @@
 import Toogle from "../Toggle";
 import logo from "../../assets/logo/logoOb2.svg";
+
+// ! NAVBAR con logo, toogle, y boton
+
 function NavBar() {
   return (
     <nav>

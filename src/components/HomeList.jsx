@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 
+// ! Lista general
+
 export default function Home() {
   const ofertasURL = "https://best-job.herokuapp.com/api/v1/ofertas";
 

@@ -1,3 +1,5 @@
+// ! Funcion para cambiar el tema de color
+
 function setTheme(themeName) {
   localStorage.setItem("theme", themeName);
   document.documentElement.className = themeName;

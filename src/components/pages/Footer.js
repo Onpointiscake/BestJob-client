@@ -1,3 +1,5 @@
+// ! Footer con autores y Copyright
+
 function Footer() {
   return (
     <footer>

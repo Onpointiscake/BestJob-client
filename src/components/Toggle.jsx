@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import "../styles/toogle.css";
 import { setTheme } from "./pages/themes";
 
+// ! Toogle para cambio de tema
+
 function Toggle() {
   const [togClass, setTogClass] = useState("dark");
   let theme = localStorage.getItem("theme");

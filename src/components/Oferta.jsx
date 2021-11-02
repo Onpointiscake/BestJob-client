@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import arrow from "../assets/icons/arrow.svg";
 
+// ! Detalle oferta
+
 export default function Oferta() {
   const [oferta, setOferta] = useState([]);
   const [tecnologia, setTecnologia] = useState([]);
@@ -59,8 +61,10 @@ export default function Oferta() {
             </li>
           </ul>
           <p className="columna_der_oferta">{oferta.detalle}</p>
-        </div><div className="button_container">
-        <button className="contact_btn">CONTACTA</button></div>
+        </div>
+        <div className="button_container">
+          <button className="contact_btn">CONTACTA</button>
+        </div>
       </div>
     </div>
   );

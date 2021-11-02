@@ -1,5 +1,7 @@
 import search from "../../assets/icons/search.svg";
 
+// ! SearchBar estatica
+
 const SearchBar = () => (
   <div className="search-nav">
     <form className="search-bar" action="/" method="get">
