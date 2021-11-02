@@ -16,10 +16,9 @@
   .container_general_oferta {
     width: 90vw;
     margin: auto;
-
   }
-  .container_oferta_ind h1{
-  font-size: 25px;
+  .container_oferta_ind h1 {
+    font-size: 25px;
   }
 
   .cuerpo_oferta {
@@ -35,5 +34,15 @@
     margin-top: 30px;
     margin-bottom: 30px;
     width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .autores ul {
+    margin-bottom: 20px;
   }
 }
