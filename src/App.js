@@ -3,10 +3,10 @@ import React, { useEffect } from "react";
 
 import Home from "./components/HomeList";
 import Oferta from "./components/Oferta";
-import Footer from "./components/pages/Footer";
-import NavBar from "./components/pages/NavBar";
-import SearchBar from "./components/pages/SearchBar";
-import { keepTheme } from "./components/pages/themes";
+import Footer from "./components/pages/footer/Footer";
+import NavBar from "./components/pages/navbar/NavBar";
+import SearchBar from "./components/pages/searchbar/SearchBar";
+import { keepTheme } from "./components/pages/toogle/themes.js";
 
 function App() {
   useEffect(() => {

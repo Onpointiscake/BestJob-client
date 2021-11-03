@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "../styles/toogle.css";
-import { setTheme } from "./pages/themes";
+import "./toogle.css";
+import { setTheme } from "./themes.js";
 
 // ! Toogle para cambio de tema
 

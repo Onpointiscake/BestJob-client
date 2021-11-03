@@ -5,11 +5,11 @@ import reportWebVitals from "./reportWebVitals";
 //STYLES
 import "./styles/index.css";
 import "./styles/oferta.css";
-import "./styles/navbar.css";
-import "./styles/searchbar.css";
-import "./styles/footer.css";
+import "./components/pages/navbar/navbar.css";
+import "./components/pages/searchbar/searchbar.css";
+import "./components/pages/footer/footer.css";
 import "./styles/queries.css";
-import "./styles/toogle.css";
+import "./components/pages/toogle/toogle.css";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -18,7 +18,4 @@ ReactDOM.render(
   document.getElementById("root")
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

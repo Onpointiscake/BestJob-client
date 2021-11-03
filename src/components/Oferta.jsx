@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import arrow from "../assets/icons/arrow.svg";
+import APIURL from "./utils/APIURL";
 
 // ! Detalle oferta
 
@@ -14,12 +15,9 @@ export default function Oferta() {
   const ofertaParamId = getParam.id;
 
   const recibirOferta = async () => {
-    const ofertaResponse = await fetch(
-      `https://best-job.herokuapp.com/api/v1/ofertas/${ofertaParamId}`
-    );
-    const tecnologiaResponse = await fetch(
-      `https://best-job.herokuapp.com/api/v1/tecnologias/${ofertaParamId}`
-    );
+    // eslint-disable-next-line no-template-curly-in-string
+    const ofertaResponse = await fetch(APIURL + "${ofertaParamId}");
+    const tecnologiaResponse = await fetch(APIURL + `${ofertaParamId}`);
 
     const data = await ofertaResponse.json();
     const dataTecnologia = await tecnologiaResponse.json();

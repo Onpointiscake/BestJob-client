@@ -1,4 +1,4 @@
-import search from "../../assets/icons/search.svg";
+import search from "../../../assets/icons/search.svg";
 
 // ! SearchBar estatica
 

@@ -1,5 +1,5 @@
-import Toogle from "../Toggle";
-import logo from "../../assets/logo/logoOb2.svg";
+import Toogle from "../toogle/Toggle";
+import logo from "../../../assets/logo/logoOb2.svg";
 
 // ! NAVBAR con logo, toogle, y boton
 

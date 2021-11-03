@@ -1,16 +1,14 @@
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
-
+import APIURL from "./utils/APIURL";
 // ! Lista general
 
 export default function Home() {
-  const ofertasURL = "https://best-job.herokuapp.com/api/v1/ofertas";
-
   const [ofertas, setOfertas] = useState([]);
   useEffect(() => recibirOfertas(), []);
 
   const recibirOfertas = async () => {
-    const ofertaResponse = await fetch(ofertasURL);
+    const ofertaResponse = await fetch(APIURL);
     const data = await ofertaResponse.json();
     setOfertas(data);
   };
