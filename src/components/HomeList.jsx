@@ -8,7 +8,7 @@ export default function Home() {
   useEffect(() => recibirOfertas(), []);
 
   const recibirOfertas = async () => {
-    const ofertaResponse = await fetch(APIURL);
+    const ofertaResponse = await fetch(APIURL+"/ofertas");
     const data = await ofertaResponse.json();
     setOfertas(data);
   };

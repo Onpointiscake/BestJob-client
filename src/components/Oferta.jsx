@@ -16,8 +16,8 @@ export default function Oferta() {
 
   const recibirOferta = async () => {
     // eslint-disable-next-line no-template-curly-in-string
-    const ofertaResponse = await fetch(APIURL + "${ofertaParamId}");
-    const tecnologiaResponse = await fetch(APIURL + `${ofertaParamId}`);
+    const ofertaResponse = await fetch(APIURL + "/ofertas/" + ofertaParamId);
+    const tecnologiaResponse = await fetch(APIURL + "/tecnologias/" + ofertaParamId);
 
     const data = await ofertaResponse.json();
     const dataTecnologia = await tecnologiaResponse.json();
